@@ -16,6 +16,10 @@ public class NewsRepository {
     public void save(News news) {
         em.persist(news);
     }
+
+    public News findByNewsId(Long newsId) {
+        return em.find(News.class, newsId);
+    }
     public List<News> findAll() {
         return em.createQuery("select n from News n", News.class)
                 .getResultList();

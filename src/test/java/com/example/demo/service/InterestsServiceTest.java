@@ -13,7 +13,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
-import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -27,7 +26,7 @@ public class InterestsServiceTest {
 
 
     @Test
-    public void subscribeInterest() {
+    public void registerInterest() {
         Interests interests = new Interests();
         interests.setInterestName("economy");
 

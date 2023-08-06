@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.Objects;
 
 @Service
 @Transactional(readOnly = true)
@@ -18,7 +17,6 @@ public class InterestsService {
 
     @Transactional
     public Long registerInterest(Interests interests) {
-//        validateDuplicateInterests(interests);
         interestsRepository.save(interests);
         return interests.getInterestId();
     }
@@ -30,13 +28,6 @@ public class InterestsService {
     public List<Interests> findAll(){
         return interestsRepository.findAll();
     }
-
-//    private void validateDuplicateInterests(Interests interests) {
-//       Interests findInterests = interestsRepository.findByInterestName(interests.getInterestName());
-//        if (!Objects.equals(findInterests.getInterestName(), "")) {
-//            throw new IllegalStateException("이미 존재하는 관심사입니다.");
-//        }
-//    }
 
 
 }
