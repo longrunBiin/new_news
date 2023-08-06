@@ -15,6 +15,7 @@ public class Interests {
 
     @Id
     @GeneratedValue
+    @Column(name = "interest_id")
     private Long interestId;
 
     private String interestName;

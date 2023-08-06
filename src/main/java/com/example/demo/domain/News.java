@@ -17,13 +17,13 @@ public class News {
     @GeneratedValue
     private Long newsId;
 
-    private String title;
+    private String title;//뉴스 제목
 
-    private String content;
+    private String content;//뉴스 내용
 
-    private String category;
+    private String category;//뉴스 카테고리
 
-    private String source;
+    private String source;//뉴스 출처
 
     private Date publishedAt;
 

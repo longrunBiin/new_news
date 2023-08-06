@@ -14,11 +14,11 @@ public class UserInterests {
     private Long userInterestId;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "InterestId")
+    @JoinColumn(name = "interest_id")
     private Interests interestId;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "userId")
     private Users userId;
 
     private String interest;
