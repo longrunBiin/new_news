@@ -22,4 +22,13 @@ public class UserInterests {
     private Users userId;
 
     private String interest;
+
+    public static UserInterests createUserInterest(Users user, Interests interest) {
+        UserInterests userInterest = new UserInterests();
+        userInterest.setInterestId(interest);
+        userInterest.setUserId(user);
+        userInterest.setInterest(interest.getInterestName());
+
+        return userInterest;
+    }
 }

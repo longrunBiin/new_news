@@ -1,6 +1,7 @@
 package com.example.demo.repository;
 
 import com.example.demo.domain.UserInterests;
+import com.example.demo.domain.Users;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;
@@ -20,10 +21,14 @@ public class UserInterestsRepository {
         return em.createQuery("select u from UserInterests u", UserInterests.class)
                 .getResultList();
     }
-    public List<UserInterests> findByInterest(String interest) {
+    public UserInterests findByInterest(String interest) {
         return em.createQuery("select u from UserInterests u where u.interest = :interest",
                         UserInterests.class)
                 .setParameter("interest", interest)
-                .getResultList();
+                .getSingleResult();
+    }
+
+    public UserInterests findOne(Long id) {
+        return em.find(UserInterests.class, id);
     }
 }
