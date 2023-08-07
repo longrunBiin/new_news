@@ -21,4 +21,12 @@ public class UserPersonalizedNews {
     @JoinColumn(name="newsId")
     private News newsId;
 
+    public static UserPersonalizedNews createUserPersonalizedNews(Users user, News news) {
+        UserPersonalizedNews userNews = new UserPersonalizedNews();
+        userNews.setNewsId(news);
+        userNews.setUserId(user);
+
+        return userNews;
+    }
+
 }

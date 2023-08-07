@@ -1,7 +1,6 @@
 package com.example.demo.service;
 
 import com.example.demo.domain.Interests;
-import com.example.demo.domain.UserInterests;
 import com.example.demo.domain.Users;
 import com.example.demo.repository.InterestsRepository;
 import com.example.demo.repository.UserInterestsRepository;

@@ -1,5 +1,6 @@
 package com.example.demo.repository;
 
+import com.example.demo.domain.UserInterests;
 import com.example.demo.domain.UserPersonalizedNews;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -19,5 +20,8 @@ public class UserPersonalizedNewsRepository {
     public List<UserPersonalizedNews> findAll() {
         return em.createQuery("select u from UserPersonalizedNews u", UserPersonalizedNews.class)
                 .getResultList();
+    }
+    public UserPersonalizedNews findOne(Long id) {
+        return em.find(UserPersonalizedNews.class, id);
     }
 }
